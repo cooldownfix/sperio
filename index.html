@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="description" content="Sperio - a cozy 2D adventure platformer. Carry the last lantern through a valley where lost memories return as mist.">
+  <meta name="theme-color" content="#0e0d15">
+  <meta property="og:title" content="Sperio - The Last Lantern">
+  <meta property="og:description" content="Wander through misty valleys, sunken halls and quiet ruins. A warm 2D adventure platformer.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./images/hero-bg.png">
+  <title>Sperio - The Last Lantern</title>
+
+  <link rel="icon" type="image/png" href="./images/favicon.png">
+  <link rel="apple-touch-icon" href="./images/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#top" class="nav-logo" id="nav-logo-link">
+        <svg class="logo-lantern" viewBox="0 0 16 16" aria-hidden="true">
+          <rect x="4" y="2" width="8" height="2" fill="#ffb454"/>
+          <rect x="5" y="4" width="6" height="6" fill="#ffd9a0"/>
+          <rect x="6" y="5" width="1" height="3" fill="#ff8f5e"/>
+          <rect x="9" y="5" width="1" height="3" fill="#ff8f5e"/>
+          <rect x="5" y="10" width="6" height="1" fill="#ffb454"/>
+          <rect x="7" y="11" width="2" height="2" fill="#ffb454"/>
+        </svg>
+        Sperio<span class="logo-dot">.</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#story" class="nav-link">Story</a></li>
+        <li><a href="#worlds" class="nav-link">Worlds</a></li>
+        <li><a href="#companions" class="nav-link">Companions</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#faq" class="nav-link">FAQ</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="#download" class="nav-download">Download</a>
+        <a href="https://www.dropbox.com/s/PUT_YOUR_LINK_HERE" target="_blank" rel="noopener" class="btn btn-primary nav-play-btn">Play</a>
+      </div>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">☰</button>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <section class="hero" id="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-overlay"></div>
+      <div class="fireflies" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy reveal">
+          <p class="hero-kicker"><span class="kicker-line"></span> a 2D adventure platformer <span class="kicker-line"></span></p>
+          <h1 class="hero-title" id="hero-title">Sperio</h1>
+          <p class="hero-tagline">
+            Every lost memory returns as mist. You carry the last lantern —
+            and the valley still remembers your name.
+          </p>
+          <div class="hero-actions">
+            <a href="https://www.dropbox.com/s/PUT_YOUR_LINK_HERE" target="_blank" rel="noopener" class="btn btn-primary">▶ Play Now</a>
+            <a href="#preview" class="btn btn-ghost">Watch Preview</a>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll" aria-hidden="true"><span></span></div>
+    </section>
+
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker-track">
+        <span>follow the lanterns</span><i>✦</i>
+        <span>mind the quiet</span><i>✦</i>
+        <span>walk your own pace</span><i>✦</i>
+        <span>secrets in the mist</span><i>✦</i>
+        <span>follow the lanterns</span><i>✦</i>
+        <span>mind the quiet</span><i>✦</i>
+        <span>walk your own pace</span><i>✦</i>
+        <span>secrets in the mist</span><i>✦</i>
+      </div>
+    </div>
+
+    <section class="section story" id="story">
+      <div class="container">
+        <h2 class="section-title reveal">The Tale of Sperio</h2>
+        <p class="section-sub reveal">three chapters from the valley</p>
+        <div class="story-grid">
+          <article class="chapter reveal">
+            <span class="chapter-num">I</span>
+            <h3 class="chapter-title">The Valley Without a Name</h3>
+            <p class="chapter-text">
+              Once, the valley had a name that people spoke like a song. Then the mist rolled
+              in from the mountain pass, and one morning the name was simply gone — along with
+              the road home, and the faces of everyone who knew it.
+            </p>
+          </article>
+          <article class="chapter reveal" data-delay="100">
+            <span class="chapter-num">II</span>
+            <h3 class="chapter-title">The Last Lantern</h3>
+            <p class="chapter-text">
+              You wake at the valley's edge with a lantern already burning beside you.
+              It does not need oil and it does not go out. Somewhere in the mist, a bell
+              rings once — and the lantern tilts toward it, as if it knows the way.
+            </p>
+          </article>
+          <article class="chapter reveal" data-delay="200">
+            <span class="chapter-num">III</span>
+            <h3 class="chapter-title">What the Mist Remembers</h3>
+            <p class="chapter-text">
+              The mist is not weather. It is what the valley kept instead of its name:
+              memories, promises, little losses. Carry the light far enough, and the world
+              begins to remember you — every stone, every gate, every quiet friend.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section download" id="download">
+      <div class="container">
+        <h2 class="section-title reveal">Download</h2>
+        <p class="section-sub reveal">grab the latest build</p>
+        <div class="download-card reveal">
+          <div class="download-top">
+            <div class="download-icon">⬇</div>
+            <div class="download-info">
+              <h3 class="download-name">Sperio — latest build</h3>
+              <p class="download-note">Windows · free · early build</p>
+            </div>
+          </div>
+          <div class="download-meta">
+            <span class="dl-chip">v0.3 early</span>
+            <span class="dl-chip">141 MB</span>
+            <span class="dl-chip">Windows 10/11</span>
+          </div>
+          <a class="btn btn-primary download-btn" href="https://www.dropbox.com/s/PUT_YOUR_LINK_HERE" target="_blank" rel="noopener">Download the game</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section preview" id="preview">
+      <div class="container">
+        <h2 class="section-title reveal">A Quiet Peek</h2>
+        <p class="section-sub reveal">footage from the early build</p>
+        <div class="window-frame reveal">
+          <video class="preview-video" src="./videos/gameplay-preview.webm" autoplay muted loop playsinline preload="auto" disablepictureinpicture disableremoteplayback></video>
+        </div>
+      </div>
+    </section>
+
+    <section class="section worlds" id="worlds">
+      <div class="container">
+        <h2 class="section-title reveal">The Worlds</h2>
+        <p class="section-sub reveal">three moods, one valley</p>
+        <div class="worlds-grid">
+          <article class="world-card reveal">
+            <div class="world-card-head">
+              <span class="world-rank">01</span>
+              <h3 class="world-name">Mistvale</h3>
+              <p class="world-role">where the game begins</p>
+            </div>
+            <p class="world-desc">Soft light, tall grass, and the first hidden corners. The lantern burns brightest here, before the world grows strange.</p>
+            <div class="world-tags"><span>gentle</span><span>hidden corners</span><span>first steps</span></div>
+          </article>
+          <article class="world-card reveal" data-delay="100">
+            <div class="world-card-head">
+              <span class="world-rank">02</span>
+              <h3 class="world-name">The Sunken Halls</h3>
+              <p class="world-role">a drowned building of echoes</p>
+            </div>
+            <p class="world-desc">Water remembers everything. Puzzles here are slower and darker, and every footstep answers from somewhere far below.</p>
+            <div class="world-tags"><span>puzzles</span><span>dark water</span><span>echoes</span></div>
+          </article>
+          <article class="world-card reveal" data-delay="200">
+            <div class="world-card-head">
+              <span class="world-rank">03</span>
+              <h3 class="world-name">The Old Ruins</h3>
+              <p class="world-role">where the story opens</p>
+            </div>
+            <p class="world-desc">Broken arches above a valley that refuses to be forgotten. The truth about the mist is buried here — if you dare to dig.</p>
+            <div class="world-tags"><span>long jumps</span><span>old enemies</span><span>the truth</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section companions" id="companions">
+      <div class="container">
+        <h2 class="section-title reveal">Companions</h2>
+        <p class="section-sub reveal">the ones you meet on the way</p>
+        <div class="companion-grid">
+          <article class="companion-card reveal">
+            <div class="portrait">
+              <svg viewBox="0 0 32 32" class="pixel-art" aria-hidden="true">
+                <rect x="10" y="4" width="12" height="4" fill="#8B4513"/>
+                <rect x="12" y="8" width="8" height="4" fill="#F4C896"/>
+                <rect x="12" y="10" width="2" height="2" fill="#2D2418"/>
+                <rect x="18" y="10" width="2" height="2" fill="#2D2418"/>
+                <rect x="8" y="12" width="16" height="10" fill="#4C6FFF"/>
+                <rect x="6" y="22" width="20" height="6" fill="#2D2418"/>
+              </svg>
+            </div>
+            <h3 class="companion-name">The Wanderer</h3>
+            <p class="companion-role">protagonist</p>
+            <p class="companion-bio">Woke up with a lantern, no memory, and a long road ahead. Quietly curious about everything.</p>
+            <div class="companion-tags"><span>curious</span><span>gentle</span><span>stubborn</span></div>
+          </article>
+
+          <article class="companion-card reveal" data-delay="80">
+            <div class="portrait">
+              <svg viewBox="0 0 32 32" class="pixel-art" aria-hidden="true">
+                <rect x="10" y="4" width="12" height="4" fill="#F4D35E"/>
+                <rect x="12" y="8" width="8" height="4" fill="#F4C896"/>
+                <rect x="12" y="10" width="2" height="2" fill="#2D2418"/>
+                <rect x="18" y="10" width="2" height="2" fill="#2D2418"/>
+                <rect x="8" y="12" width="16" height="10" fill="#F5EBD2"/>
+                <rect x="16" y="16" width="8" height="4" fill="#7A9A52"/>
+                <rect x="6" y="22" width="20" height="6" fill="#5E7840"/>
+              </svg>
+            </div>
+            <h3 class="companion-name">The Elder</h3>
+            <p class="companion-role">guide</p>
+            <p class="companion-bio">Lives at the edge of the valley, speaks in riddles, and remembers more than he admits.</p>
+            <div class="companion-tags"><span>wise</span><span>riddles</span><span>ancient</span></div>
+          </article>
+
+          <article class="companion-card reveal" data-delay="160">
+            <div class="portrait">
+              <svg viewBox="0 0 32 32" class="pixel-art" aria-hidden="true">
+                <rect x="10" y="6" width="12" height="6" fill="#922B21"/>
+                <rect x="12" y="12" width="8" height="4" fill="#7A9A52"/>
+                <rect x="10" y="16" width="12" height="8" fill="#5E7840"/>
+                <rect x="14" y="18" width="4" height="4" fill="#F4D35E"/>
+                <rect x="6" y="24" width="20" height="4" fill="#3A4436"/>
+              </svg>
+            </div>
+            <h3 class="companion-name">The Keeper</h3>
+            <p class="companion-role">protector</p>
+            <p class="companion-bio">A mossy guardian of the old paths. Not unfriendly — just very, very thorough.</p>
+            <div class="companion-tags"><span>strong</span><span>patient</span><span>vigilant</span></div>
+          </article>
+
+          <article class="companion-card reveal" data-delay="240">
+            <div class="portrait">
+              <svg viewBox="0 0 32 32" class="pixel-art" aria-hidden="true">
+                <rect x="12" y="4" width="8" height="4" fill="#E8C45C"/>
+                <rect x="14" y="8" width="4" height="2" fill="#F4C896"/>
+                <rect x="14" y="9" width="1" height="1" fill="#2D2418"/>
+                <rect x="17" y="9" width="1" height="1" fill="#2D2418"/>
+                <rect x="10" y="10" width="12" height="12" fill="#F4D35E"/>
+                <rect x="14" y="14" width="4" height="2" fill="#E8C45C"/>
+                <rect x="8" y="22" width="16" height="6" fill="#F5EBD2"/>
+              </svg>
+            </div>
+            <h3 class="companion-name">The Lantern</h3>
+            <p class="companion-role">light</p>
+            <p class="companion-bio">Not a person and not exactly a fire. Only shows the way when you stop rushing.</p>
+            <div class="companion-tags"><span>glowing</span><span>quiet</span><span>loyal</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery" id="gallery">
+      <div class="container">
+        <h2 class="section-title reveal">Gallery</h2>
+        <p class="section-sub reveal">a few frames from the valley</p>
+        <div class="gallery-grid">
+          <figure class="gallery-item reveal" data-index="0">
+            <img src="./images/screenshot1.png" alt="Sperio - push puzzle in the old hall" loading="lazy">
+          </figure>
+          <figure class="gallery-item reveal" data-index="1" data-delay="80">
+            <img src="./images/screenshot2.png" alt="Sperio - first steps and ledges" loading="lazy">
+          </figure>
+          <figure class="gallery-item reveal" data-index="2" data-delay="160">
+            <img src="./images/screenshot3.png" alt="Sperio - jumping across ruined platforms" loading="lazy">
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <div class="lightbox" id="lightbox" hidden>
+      <button class="lightbox-btn close" id="lightbox-close" aria-label="Close">×</button>
+      <button class="lightbox-btn prev" id="lightbox-prev" aria-label="Previous">‹</button>
+      <img src="" alt="Screenshot preview" class="lightbox-img" id="lightbox-img">
+      <button class="lightbox-btn next" id="lightbox-next" aria-label="Next">›</button>
+    </div>
+
+    <section class="section features" id="features">
+      <div class="container">
+        <h2 class="section-title reveal">Why Sperio</h2>
+        <p class="section-sub reveal">small promises, big walks</p>
+        <div class="feature-grid">
+          <div class="feature-card reveal">
+            <div class="feature-icon">🌿</div>
+            <h3 class="feature-name">Wander, don't rush</h3>
+            <p class="feature-desc">No timers. Every screen rewards whoever stops to look.</p>
+          </div>
+          <div class="feature-card reveal" data-delay="80">
+            <div class="feature-icon">🍃</div>
+            <h3 class="feature-name">Hand-placed worlds</h3>
+            <p class="feature-desc">Every ledge, stone and bush was put where it is on purpose.</p>
+          </div>
+          <div class="feature-card reveal" data-delay="160">
+            <div class="feature-icon">✨</div>
+            <h3 class="feature-name">Secrets in the mist</h3>
+            <p class="feature-desc">Hidden rooms and small surprises for the patient explorer.</p>
+          </div>
+          <div class="feature-card reveal" data-delay="240">
+            <div class="feature-icon">📖</div>
+            <h3 class="feature-name">A story that listens</h3>
+            <p class="feature-desc">No cutscenes. The valley tells its own story as you walk it.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section roadmap" id="roadmap">
+      <div class="container">
+        <h2 class="section-title reveal">Roadmap</h2>
+        <p class="section-sub reveal">our trail toward version 1.0</p>
+        <div class="timeline">
+          <div class="timeline-item done reveal">
+            <div class="timeline-marker">✓</div>
+            <div class="timeline-card">
+              <span class="timeline-phase">done</span>
+              <h3 class="timeline-title">The first walk</h3>
+              <p class="timeline-desc">Core movement, the opening stretch of Mistvale, and the lantern mechanic.</p>
+            </div>
+          </div>
+          <div class="timeline-item active reveal" data-delay="100">
+            <div class="timeline-marker">◌</div>
+            <div class="timeline-card">
+              <span class="timeline-phase">now</span>
+              <h3 class="timeline-title">The Sunken Halls</h3>
+              <p class="timeline-desc">Darker lighting, puzzle blocks, and the first real echo of the old story.</p>
+            </div>
+          </div>
+          <div class="timeline-item soon reveal" data-delay="200">
+            <div class="timeline-marker">○</div>
+            <div class="timeline-card">
+              <span class="timeline-phase">next</span>
+              <h3 class="timeline-title">The Old Ruins</h3>
+              <p class="timeline-desc">Longer jumps, patient enemies, and the truth waiting under the arches.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section faq" id="faq">
+      <div class="container">
+        <h2 class="section-title reveal">FAQ</h2>
+        <p class="section-sub reveal">questions we have actually been asked</p>
+        <div class="faq-list">
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">Is the game finished? <span class="faq-toggle">+</span></button>
+            <div class="faq-answer"><p>Not yet. Sperio is an early build — the valley is still growing, and every update adds new ground to wander.</p></div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">Is it a paid game? <span class="faq-toggle">+</span></button>
+            <div class="faq-answer"><p>The early build is free. If the valley ever becomes a full release, the price will be gentle — that is a promise we keep.</p></div>
+          </div>
+          <div class="faq-item reveal">
+            <button class="faq-question" aria-expanded="false">Will there be updates? <span class="faq-toggle">+</span></button>
+            <div class="faq-answer"><p>Yes — small, honest updates as the project moves. The roadmap above is exactly where we are headed.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <span class="footer-logo">Sperio<span class="logo-dot">.</span></span>
+        <span class="footer-tag">a small world, carried home</span>
+      </div>
+      <p class="footer-note">© <span id="footer-year"></span> Sperio — a tiny studio project. Tea-powered.</p>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" hidden>found a secret :)</div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

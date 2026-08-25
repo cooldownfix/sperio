@@ -1,0 +1,1014 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+    <meta name="description" content="ScanFall - A cozy 2D adventure platformer. Explore mysterious forests, silent caves, and ancient ruins in this charming indie game. Currently in Beta.">
+    <meta name="theme-color" content="#7A9A52">
+    <meta property="og:title" content="ScanFall  - A Small Adventure">
+    <meta property="og:description" content="ScanFall  - A cozy 2D adventure platformer. Explore mysterious forests, silent caves, and ancient ruins in this charming indie game. Currently in Beta.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://haisekingdom.pages.dev/">
+    <meta property="og:image" content="https://haisekingdom.pages.dev/images/og-image.png">
+    <meta property="og:image:type" content="image/png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:image" content="https://haisekingdom.pages.dev/images/og-image.png">
+    <title>ScanFall  - A Small Adventure</title>
+
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="apple-touch-icon" href="images/favicon.png">
+
+    <!-- Pixel Font: Press Start 2P -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ============================================ -->
+    <!--                 NAVIGATION                   -->
+    <!-- ============================================ -->
+    <nav id="navbar">
+        <div class="nav-inner">
+            <!-- Easter egg: click logo 5 times -->
+            <a href="#" class="nav-logo" id="nav-logo-link">ScanFall </a>
+            <ul class="nav-links">
+                <li><a href="#" class="nav-play-btn" id="nav-download-btn"><span class="nav-play-icon">▶</span> Play Now</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#characters">Characters</a></li>
+                <li><a href="#screenshots">Screenshots</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#roadmap">Roadmap</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">☰</button>
+        </div>
+    </nav>
+
+    <!-- ============================================ -->
+    <!--                HERO SECTION                  -->
+    <!-- ============================================ -->
+    <!-- 
+        HERO BACKGROUND IMAGE:
+        Replace the background-image in style.css .hero section
+        with your own artwork. The image should be large and cinematic.
+        It will ONLY appear in this hero section.
+    -->
+    <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <!-- Top row: game info (left) + gameplay preview (right) -->
+            <div class="hero-top">
+                <div class="hero-left">
+                    <h1 class="hero-title" id="hero-title">ScanFall </h1>
+                    <p class="hero-description">
+                        Something stirs beneath the forgotten woods, whispering of paths no one remembers.
+                        Step into a world where every shadow holds a story and every silence hides a secret.
+                    </p>
+                    <div class="hero-genre">2D Adventure Platformer</div>
+                    <div class="hero-actions">
+                        <!-- Download is gated by the beta access popup — see script.js for the download URL -->
+                        <a href="#" class="btn-play" id="download-btn">
+                            <span class="btn-play-icon">▶</span> PLAY NOW
+                        </a>
+                        <span class="beta-badge">BETA VERSION</span>
+                    </div>
+                    <div class="hero-trust">
+                        <span class="trust-icon">🪟</span> Windows Beta Build &middot; Safe to Download
+                    </div>
+                    <div class="download-counter">
+                        <span class="counter-icon">⬇</span> Downloads: <strong>47</strong>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="gameplay-gif-container">
+                        <div class="gif-frame">
+                            <video
+                                class="gameplay-gif"
+                                src="videos/gameplay-preview.webm"
+                                muted
+                                loop
+                                playsinline
+                                preload="auto"
+                                disablepictureinpicture
+                                disableremoteplayback>
+                            </video>
+                        </div>
+                        <p class="gif-caption">Gameplay preview - Beta footage</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Developer pixel avatars — sits in existing green space, no extra height -->
+        <div class="hero-dev-row">
+                <div class="dev-pixel-circle">
+                    <span class="dev-pixel-tooltip">Emir</span>
+                    <svg class="dev-pixel-art" viewBox="0 0 16 16" aria-hidden="true">
+                        <rect x="5" y="2" width="6" height="2" fill="#2D2418"/>
+                        <rect x="6" y="3" width="4" height="2" fill="#F4C896"/>
+                        <rect x="6" y="4" width="1" height="1" fill="#2D2418"/>
+                        <rect x="9" y="4" width="1" height="1" fill="#2D2418"/>
+                        <rect x="4" y="5" width="8" height="6" fill="#7A9A52"/>
+                        <rect x="5" y="6" width="6" height="1" fill="#5E7840"/>
+                        <rect x="3" y="11" width="10" height="3" fill="#242924"/>
+                        <rect x="4" y="11" width="8" height="2" fill="#5865F2"/>
+                        <rect x="7" y="12" width="2" height="1" fill="#F4D35E"/>
+                    </svg>
+                </div>
+                <div class="dev-pixel-circle">
+                    <span class="dev-pixel-tooltip">Morin</span>
+                    <svg class="dev-pixel-art" viewBox="0 0 16 16" aria-hidden="true">
+                        <rect x="5" y="2" width="6" height="1" fill="#8B4513"/>
+                        <rect x="4" y="3" width="8" height="2" fill="#C0392B"/>
+                        <rect x="6" y="4" width="4" height="2" fill="#F4C896"/>
+                        <rect x="6" y="5" width="1" height="1" fill="#2D2418"/>
+                        <rect x="9" y="5" width="1" height="1" fill="#2D2418"/>
+                        <rect x="5" y="6" width="6" height="5" fill="#9B59B6"/>
+                        <rect x="4" y="7" width="1" height="3" fill="#F4C896"/>
+                        <rect x="11" y="7" width="1" height="3" fill="#F4C896"/>
+                        <rect x="12" y="8" width="2" height="1" fill="#E74C3C"/>
+                        <rect x="13" y="9" width="1" height="2" fill="#F4D35E"/>
+                        <rect x="5" y="11" width="2" height="3" fill="#2D2418"/>
+                        <rect x="9" y="11" width="2" height="3" fill="#2D2418"/>
+                    </svg>
+                </div>
+                <div class="dev-pixel-circle">
+                    <span class="dev-pixel-tooltip">Aizy</span>
+                    <svg class="dev-pixel-art" viewBox="0 0 16 16" aria-hidden="true">
+                        <rect x="5" y="2" width="6" height="2" fill="#5DADE2"/>
+                        <rect x="6" y="4" width="4" height="2" fill="#F4C896"/>
+                        <rect x="6" y="5" width="1" height="1" fill="#2D2418"/>
+                        <rect x="9" y="5" width="1" height="1" fill="#2D2418"/>
+                        <rect x="3" y="5" width="2" height="4" fill="#3498DB"/>
+                        <rect x="11" y="5" width="2" height="4" fill="#3498DB"/>
+                        <rect x="2" y="6" width="1" height="2" fill="#2980B9"/>
+                        <rect x="13" y="6" width="1" height="2" fill="#2980B9"/>
+                        <rect x="5" y="6" width="6" height="5" fill="#1A5276"/>
+                        <rect x="6" y="8" width="4" height="1" fill="#F4D35E"/>
+                        <rect x="5" y="11" width="2" height="3" fill="#2D2418"/>
+                        <rect x="9" y="11" width="2" height="3" fill="#2D2418"/>
+                    </svg>
+                </div>
+                <div class="dev-pixel-circle">
+                    <span class="dev-pixel-tooltip">Charlie</span>
+                    <svg class="dev-pixel-art" viewBox="0 0 16 16" aria-hidden="true">
+                        <rect x="5" y="2" width="6" height="2" fill="#1C2833"/>
+                        <rect x="5" y="3" width="2" height="1" fill="#2D2418"/>
+                        <rect x="9" y="3" width="2" height="1" fill="#2D2418"/>
+                        <rect x="6" y="4" width="4" height="2" fill="#F4C896"/>
+                        <rect x="5" y="4" width="1" height="1" fill="#2D2418"/>
+                        <rect x="10" y="4" width="1" height="1" fill="#2D2418"/>
+                        <rect x="6" y="5" width="1" height="1" fill="#2D2418"/>
+                        <rect x="9" y="5" width="1" height="1" fill="#2D2418"/>
+                        <rect x="5" y="6" width="6" height="5" fill="#E67E22"/>
+                        <rect x="10" y="7" width="3" height="4" fill="#F5EBD2"/>
+                        <rect x="11" y="8" width="2" height="1" fill="#7A9A52"/>
+                        <rect x="11" y="9" width="2" height="1" fill="#F4D35E"/>
+                        <rect x="5" y="11" width="2" height="3" fill="#2D2418"/>
+                        <rect x="9" y="11" width="2" height="3" fill="#2D2418"/>
+                    </svg>
+                </div>
+                <div class="dev-pixel-circle">
+                    <span class="dev-pixel-tooltip">Rover</span>
+                    <svg class="dev-pixel-art" viewBox="0 0 16 16" aria-hidden="true">
+                        <rect x="6" y="2" width="4" height="2" fill="#922B21"/>
+                        <rect x="6" y="4" width="4" height="2" fill="#F4C896"/>
+                        <rect x="6" y="5" width="1" height="1" fill="#2D2418"/>
+                        <rect x="9" y="5" width="1" height="1" fill="#2D2418"/>
+                        <rect x="5" y="6" width="6" height="5" fill="#48C9B0"/>
+                        <rect x="11" y="8" width="3" height="3" fill="none" stroke="#F4D35E" stroke-width="1"/>
+                        <rect x="13" y="10" width="2" height="1" fill="#F4D35E"/>
+                        <rect x="14" y="11" width="1" height="1" fill="#F4D35E"/>
+                        <rect x="4" y="9" width="2" height="2" fill="#E74C3C"/>
+                        <rect x="4" y="10" width="1" height="1" fill="#2D2418"/>
+                        <rect x="5" y="11" width="2" height="3" fill="#2D2418"/>
+                        <rect x="9" y="11" width="2" height="3" fill="#2D2418"/>
+                    </svg>
+                </div>
+            </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--              BETA STATUS SECTION             -->
+    <!-- ============================================ -->
+    <section class="section beta-status" id="beta-status">
+        <div class="container">
+            <h2 class="section-title">~ Beta Status ~</h2>
+            <div class="beta-info-grid">
+                <div class="beta-info-card">
+                    <div class="beta-info-label">Current Version</div>
+                    <div class="beta-info-value">v0.3.2</div>
+                </div>
+                <div class="beta-info-card">
+                    <div class="beta-info-label">Last Update</div>
+                    <div class="beta-info-value">June 8, 2026</div>
+                </div>
+                <div class="beta-info-card">
+                    <div class="beta-info-label">Status</div>
+                    <div class="beta-info-value status-active">In Development</div>
+                </div>
+            </div>
+
+            <div class="progress-section">
+                <h3 class="progress-heading">Development Progress</h3>
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Story Progress</span>
+                        <span>42%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 42%"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Levels</span>
+                        <span>35%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 35%"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Bug Fixing</span>
+                        <span>60%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 60%"></div>
+                    </div>
+                </div>
+                <div class="progress-item">
+                    <div class="progress-label">
+                        <span>Future Content</span>
+                        <span>15%</span>
+                    </div>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 15%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="known-issues">
+                <h3 class="issues-heading">⚠ Known Issues</h3>
+                <ul class="issues-list">
+                    <li><strong>Smart Screen:</strong> When a blue Smart Screen appears, follow the steps below.</li>
+                    <li><strong>Fix:</strong> If you see a smart screen error on a blue screen, click on "more info" and select "run anyway"..</li>
+                    <li>Still happening? Run the game as administrator and try again.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--              GAME STATISTICS                 -->
+    <!-- ============================================ -->
+    <section class="section game-stats" id="game-stats">
+        <div class="container">
+            <h2 class="section-title">~ Game Statistics ~</h2>
+            <p class="section-subtitle">live beta metrics</p>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">⏱️</div>
+                    <div class="stat-value" id="stat-playtime">2,847</div>
+                    <div class="stat-label">Total Hours Played</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">👥</div>
+                    <div class="stat-value" id="stat-players">47</div>
+                    <div class="stat-label">Active Beta Testers</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">🎮</div>
+                    <div class="stat-value" id="stat-sessions">1,523</div>
+                    <div class="stat-label">Total Play Sessions</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-value">4.2/5</div>
+                    <div class="stat-label">Average Rating</div>
+                </div>
+            </div>
+            
+            <div class="popular-areas">
+                <h3 class="popular-heading">Most Popular Areas</h3>
+                <div class="area-list">
+                    <div class="area-item">
+                        <div class="area-name">
+                            <span class="area-rank">#1</span>
+                            <span>Forgotten Forest</span>
+                        </div>
+                        <div class="area-bar">
+                            <div class="area-fill" style="width: 85%"></div>
+                        </div>
+                        <div class="area-percent">85%</div>
+                    </div>
+                    <div class="area-item">
+                        <div class="area-name">
+                            <span class="area-rank">#2</span>
+                            <span>Silent Caves</span>
+                        </div>
+                        <div class="area-bar">
+                            <div class="area-fill" style="width: 62%"></div>
+                        </div>
+                        <div class="area-percent">62%</div>
+                    </div>
+                    <div class="area-item">
+                        <div class="area-name">
+                            <span class="area-rank">#3</span>
+                            <span>Ancient Ruins</span>
+                        </div>
+                        <div class="area-bar">
+                            <div class="area-fill" style="width: 38%"></div>
+                        </div>
+                        <div class="area-percent">38%</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                ACHIEVEMENTS                  -->
+    <!-- ============================================ -->
+    <section class="section achievements" id="achievements">
+        <div class="container">
+            <h2 class="section-title">~ Achievements ~</h2>
+            <p class="section-subtitle">unlock them all</p>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <div class="achievement-icon unlocked">🌱</div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-name">First Steps</h3>
+                        <p class="achievement-desc">Complete the tutorial area</p>
+                        <div class="achievement-progress">
+                            <span class="progress-text">Unlocked by 94% of players</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon unlocked">🗝️</div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-name">Key Finder</h3>
+                        <p class="achievement-desc">Find the hidden silver key</p>
+                        <div class="achievement-progress">
+                            <span class="progress-text">Unlocked by 67% of players</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon unlocked">🏔️</div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-name">Peak Climber</h3>
+                        <p class="achievement-desc">Reach the highest point in the forest</p>
+                        <div class="achievement-progress">
+                            <span class="progress-text">Unlocked by 43% of players</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon unlocked">🕯️</div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-name">Light Bearer</h3>
+                        <p class="achievement-desc">Light all the ancient torches</p>
+                        <div class="achievement-progress">
+                            <span class="progress-text">Unlocked by 28% of players</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon locked">🔒</div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-name">Secret Keeper</h3>
+                        <p class="achievement-desc">Discover the hidden chamber</p>
+                        <div class="achievement-progress">
+                            <span class="progress-text">Unlocked by 12% of players</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="achievement-card">
+                    <div class="achievement-icon locked">🔒</div>
+                    <div class="achievement-content">
+                        <h3 class="achievement-name">Speed Runner</h3>
+                        <p class="achievement-desc">Complete the beta in under 20 minutes</p>
+                        <div class="achievement-progress">
+                            <span class="progress-text">Unlocked by 5% of players</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--             ABOUT THE GAME                   -->
+    <!-- ============================================ -->
+    <section class="section about" id="about">
+        <div class="container">
+            <h2 class="section-title">~ About The Game ~</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        ScanFall  is a small 2D adventure platformer about wandering through
+                        quiet, forgotten places. You play as a little traveler who wakes up
+                        in a world that feels both familiar and strange.
+                    </p>
+                    <p>
+                        There's no rush. No timers. Just you, the wind, and whatever
+                        lies beyond the next screen. Explore mossy forests, jump across
+                        crumbling ruins, and piece together the story of a world that
+                        has been asleep for a very long time.
+                    </p>
+                    <p>
+                        This game is being made by a tiny team who just wanted to create
+                        something cozy. It's not perfect, but we hope you enjoy wandering
+                        through it as much as we enjoyed making it.
+                    </p>
+                </div>
+                <div class="about-details">
+                    <div class="about-detail-item">
+                        <span class="detail-label">Genre</span>
+                        <span class="detail-value">2D Adventure Platformer</span>
+                    </div>
+                    <div class="about-detail-item">
+                        <span class="detail-label">Platform</span>
+                        <span class="detail-value">Windows</span>
+                    </div>
+                    <div class="about-detail-item">
+                        <span class="detail-label">Status</span>
+                        <span class="detail-value">Early Beta</span>
+                    </div>
+                    <div class="about-detail-item">
+                        <span class="detail-label">Price</span>
+                        <span class="detail-value">Free (Beta)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                  CHARACTERS                  -->
+    <!-- ============================================ -->
+    <section class="section characters" id="characters">
+        <div class="container">
+            <h2 class="section-title">~ Characters ~</h2>
+            <p class="section-subtitle">meet the wanderers</p>
+            <div class="characters-grid">
+                <div class="character-card">
+                    <div class="character-portrait">
+                        <div class="character-avatar">
+                            <svg class="character-pixel-art" viewBox="0 0 32 32" aria-hidden="true">
+                                <rect x="10" y="4" width="12" height="4" fill="#8B4513"/>
+                                <rect x="12" y="8" width="8" height="4" fill="#F4C896"/>
+                                <rect x="12" y="10" width="2" height="2" fill="#2D2418"/>
+                                <rect x="18" y="10" width="2" height="2" fill="#2D2418"/>
+                                <rect x="8" y="12" width="16" height="10" fill="#5865F2"/>
+                                <rect x="6" y="22" width="20" height="6" fill="#2D2418"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="character-info">
+                        <h3 class="character-name">The Wanderer</h3>
+                        <div class="character-role">Protagonist</div>
+                        <p class="character-bio">
+                            A quiet traveler who woke up in a strange forest with no memory
+                            of how they got there. Driven by curiosity and a faint sense of
+                            something forgotten, they venture deeper into the unknown.
+                        </p>
+                        <div class="character-traits">
+                            <span class="trait">🏃 Agile</span>
+                            <span class="trait">🧩 Curious</span>
+                            <span class="trait">🌙 Silent</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="character-card">
+                    <div class="character-portrait">
+                        <div class="character-avatar">
+                            <svg class="character-pixel-art" viewBox="0 0 32 32" aria-hidden="true">
+                                <rect x="10" y="4" width="12" height="4" fill="#F4D35E"/>
+                                <rect x="12" y="8" width="8" height="4" fill="#F4C896"/>
+                                <rect x="12" y="10" width="2" height="2" fill="#2D2418"/>
+                                <rect x="18" y="10" width="2" height="2" fill="#2D2418"/>
+                                <rect x="8" y="12" width="16" height="10" fill="#F5EBD2"/>
+                                <rect x="16" y="16" width="8" height="4" fill="#7A9A52"/>
+                                <rect x="6" y="22" width="20" height="6" fill="#5E7840"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="character-info">
+                        <h3 class="character-name">The Elder</h3>
+                        <div class="character-role">Guide</div>
+                        <p class="character-bio">
+                            An old hermit living at the edge of the forest. Speaks in riddles
+                            and offers cryptic advice. They seem to know more than they let on
+                            about the world's forgotten past.
+                        </p>
+                        <div class="character-traits">
+                            <span class="trait">📚 Wise</span>
+                            <span class="trait">🔮 Mysterious</span>
+                            <span class="trait">🕰️ Ancient</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="character-card">
+                    <div class="character-portrait">
+                        <div class="character-avatar">
+                            <svg class="character-pixel-art" viewBox="0 0 32 32" aria-hidden="true">
+                                <rect x="10" y="6" width="12" height="6" fill="#922B21"/>
+                                <rect x="12" y="12" width="8" height="4" fill="#7A9A52"/>
+                                <rect x="10" y="16" width="12" height="8" fill="#5E7840"/>
+                                <rect x="14" y="18" width="4" height="4" fill="#F4D35E"/>
+                                <rect x="6" y="24" width="20" height="4" fill="#3A4436"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="character-info">
+                        <h3 class="character-name">Forest Guardian</h3>
+                        <div class="character-role">Protector</div>
+                        <p class="character-bio">
+                            A stone golem covered in moss and vines. It guards the ancient
+                            paths and challenges those who dare to disturb the forest's peace.
+                            Not hostile, but vigilant.
+                        </p>
+                        <div class="character-traits">
+                            <span class="trait">🛡️ Strong</span>
+                            <span class="trait">🌿 Nature-bound</span>
+                            <span class="trait">⚔️ Guardian</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="character-card">
+                    <div class="character-portrait">
+                        <div class="character-avatar">
+                            <svg class="character-pixel-art" viewBox="0 0 32 32" aria-hidden="true">
+                                <rect x="12" y="4" width="8" height="4" fill="#E8C45C"/>
+                                <rect x="14" y="8" width="4" height="2" fill="#F4C896"/>
+                                <rect x="14" y="9" width="1" height="1" fill="#2D2418"/>
+                                <rect x="17" y="9" width="1" height="1" fill="#2D2418"/>
+                                <rect x="10" y="10" width="12" height="12" fill="#F4D35E"/>
+                                <rect x="14" y="14" width="4" height="2" fill="#E8C45C"/>
+                                <rect x="8" y="22" width="16" height="6" fill="#F5EBD2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="character-info">
+                        <h3 class="character-name">The Lightkeeper</h3>
+                        <div class="character-role">Spirit</div>
+                        <p class="character-bio">
+                            A glowing spirit that appears near ancient torches and lanterns.
+                            It doesn't speak, but guides lost travelers with gentle light.
+                            Some say it's the soul of a wanderer who never found their way home.
+                        </p>
+                        <div class="character-traits">
+                            <span class="trait">✨ Ethereal</span>
+                            <span class="trait">💡 Guiding</span>
+                            <span class="trait">🕊️ Peaceful</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--              SCREENSHOTS                     -->
+    <!-- ============================================ -->
+    <section class="section screenshots" id="screenshots">
+        <div class="container">
+            <h2 class="section-title">~ Screenshots ~</h2>
+            <p class="section-subtitle">a few moments from the game</p>
+            <div class="screenshots-grid">
+                <div class="screenshot-item" data-index="0">
+                    <img src="images/screenshot1.png" alt="HAISE Screenshot - Push puzzle" loading="lazy">
+                </div>
+                <div class="screenshot-item" data-index="1">
+                    <img src="images/screenshot2.png" alt="HAISE Screenshot - Movement tutorial" loading="lazy">
+                </div>
+                <div class="screenshot-item" data-index="2">
+                    <img src="images/screenshot3.png" alt="HAISE Screenshot - Jumping platforms" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Screenshot Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightbox-close">&times;</button>
+        <button class="lightbox-prev" id="lightbox-prev">&#8249;</button>
+        <img src="" alt="Screenshot preview" class="lightbox-img" id="lightbox-img">
+        <button class="lightbox-next" id="lightbox-next">&#8250;</button>
+    </div>
+
+    <!-- ============================================ -->
+    <!--                FEATURES                      -->
+    <!-- ============================================ -->
+    <section class="section features" id="features">
+        <div class="container">
+            <h2 class="section-title">~ Features ~</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌿</div>
+                    <h3 class="feature-name">Explore Strange Places</h3>
+                    <p class="feature-desc">
+                        Wander through quiet forests, dark caves, and forgotten ruins.
+                        Every area has something hidden if you look carefully.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🍃</div>
+                    <h3 class="feature-name">Platforming Challenges</h3>
+                    <p class="feature-desc">
+                        Jump, climb, and find your way through tricky levels.
+                        Some paths are harder than they look.
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">✨</div>
+                    <h3 class="feature-name">Hidden Secrets</h3>
+                    <p class="feature-desc">
+                        Secret rooms, hidden items, and little surprises scattered
+                        throughout the world. Can you find them all?
+                    </p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📖</div>
+                    <h3 class="feature-name">Story-Driven Adventure</h3>
+                    <p class="feature-desc">
+                        Piece together the story through exploration. No cutscenes,
+                        no tutorials. Just you and the world.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                   ROADMAP                    -->
+    <!-- ============================================ -->
+    <section class="section roadmap" id="roadmap">
+        <div class="container">
+            <h2 class="section-title">~ Development Roadmap ~</h2>
+            <p class="section-subtitle">our journey to full release</p>
+            <div class="roadmap-timeline">
+                <div class="roadmap-item completed">
+                    <div class="roadmap-marker"></div>
+                    <div class="roadmap-content">
+                        <div class="roadmap-phase">Phase 1</div>
+                        <h3 class="roadmap-title">Early Beta Launch</h3>
+                        <div class="roadmap-date">April 2026</div>
+                        <p class="roadmap-desc">
+                            Initial beta release with core mechanics, tutorial area,
+                            and the Forgotten Forest zone. Basic movement and platforming.
+                        </p>
+                        <div class="roadmap-status completed-badge">✓ Completed</div>
+                    </div>
+                </div>
+
+                <div class="roadmap-item completed">
+                    <div class="roadmap-marker"></div>
+                    <div class="roadmap-content">
+                        <div class="roadmap-phase">Phase 2</div>
+                        <h3 class="roadmap-title">Cave System</h3>
+                        <div class="roadmap-date">May 2026</div>
+                        <p class="roadmap-desc">
+                            Added Silent Caves area with darker atmosphere, puzzle mechanics,
+                            and environmental storytelling. Movement improvements.
+                        </p>
+                        <div class="roadmap-status completed-badge">✓ Completed</div>
+                    </div>
+                </div>
+
+                <div class="roadmap-item active">
+                    <div class="roadmap-marker"></div>
+                    <div class="roadmap-content">
+                        <div class="roadmap-phase">Phase 3</div>
+                        <h3 class="roadmap-title">Ancient Ruins</h3>
+                        <div class="roadmap-date">June - July 2026</div>
+                        <p class="roadmap-desc">
+                            Currently working on the Ancient Ruins zone with complex platforming
+                            challenges, new enemies, and deeper story revelations.
+                        </p>
+                        <div class="roadmap-status active-badge">🔄 In Progress</div>
+                    </div>
+                </div>
+
+                <div class="roadmap-item upcoming">
+                    <div class="roadmap-marker"></div>
+                    <div class="roadmap-content">
+                        <div class="roadmap-phase">Phase 4</div>
+                        <h3 class="roadmap-title">Sound & Music Overhaul</h3>
+                        <div class="roadmap-date">August 2026</div>
+                        <p class="roadmap-desc">
+                            Complete soundtrack with area-specific themes, ambient sounds,
+                            sound effects polish, and audio atmosphere improvements.
+                        </p>
+                        <div class="roadmap-status upcoming-badge">📅 Planned</div>
+                    </div>
+                </div>
+
+                <div class="roadmap-item upcoming">
+                    <div class="roadmap-marker"></div>
+                    <div class="roadmap-content">
+                        <div class="roadmap-phase">Phase 5</div>
+                        <h3 class="roadmap-title">Final Content</h3>
+                        <div class="roadmap-date">September 2026</div>
+                        <p class="roadmap-desc">
+                            Boss encounters, final story chapters, secret areas,
+                            and additional achievements. Beta testing and polish.
+                        </p>
+                        <div class="roadmap-status upcoming-badge">📅 Planned</div>
+                    </div>
+                </div>
+
+                <div class="roadmap-item upcoming">
+                    <div class="roadmap-marker"></div>
+                    <div class="roadmap-content">
+                        <div class="roadmap-phase">Full Release</div>
+                        <h3 class="roadmap-title">Version 1.0</h3>
+                        <div class="roadmap-date">Late 2026</div>
+                        <p class="roadmap-desc">
+                            Official launch with complete story, all areas unlocked,
+                            Steam release, and possible ports to other platforms.
+                        </p>
+                        <div class="roadmap-status future-badge">🚀 Future</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--           SYSTEM REQUIREMENTS                -->
+    <!-- ============================================ -->
+    <section class="section sysreq" id="sysreq">
+        <div class="container">
+            <h2 class="section-title">~ System Requirements ~</h2>
+            <div class="sysreq-grid">
+                <div class="sysreq-card">
+                    <h3 class="sysreq-heading">Minimum</h3>
+                    <ul class="sysreq-list">
+                        <!-- Replace these with your actual requirements -->
+                        <li><strong>OS:</strong> Windows 7 / 8 / 10</li>
+                        <li><strong>CPU:</strong> Dual Core 2.0 GHz</li>
+                        <li><strong>RAM:</strong> 2 GB</li>
+                        <li><strong>GPU:</strong> Integrated Graphics</li>
+                        <li><strong>Storage:</strong> 500 MB</li>
+                        <li><strong>DirectX:</strong> Version 9.0c</li>
+                    </ul>
+                </div>
+                <div class="sysreq-card">
+                    <h3 class="sysreq-heading">Recommended</h3>
+                    <ul class="sysreq-list">
+                        <!-- Replace these with your actual requirements -->
+                        <li><strong>OS:</strong> Windows 10 / 11</li>
+                        <li><strong>CPU:</strong> Quad Core 2.5 GHz</li>
+                        <li><strong>RAM:</strong> 4 GB</li>
+                        <li><strong>GPU:</strong> Dedicated GPU, 1GB VRAM</li>
+                        <li><strong>Storage:</strong> 1 GB</li>
+                        <li><strong>DirectX:</strong> Version 11</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                    FAQ                       -->
+    <!-- ============================================ -->
+    <section class="section faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">~ FAQ ~</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Is the game finished?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Not yet! ScanFall  is currently in Beta. We're still adding new areas,
+                        fixing bugs, and polishing the experience. There's still a lot of
+                        content planned for the future.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Is the game free?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The Beta version is completely free to download and play. We haven't
+                        decided on pricing for the full release yet, but we'll announce that
+                        when the time comes.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        How long is the game?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>The current Beta has about 30-45 minutes of content depending on how
+                        much you explore. The full game will be longer as we add more areas
+                        and story content.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Will there be updates?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! We try to push updates regularly. New areas, bug fixes, and
+                        improvements are being worked on. Follow our Discord to stay
+                        updated on development progress.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" aria-expanded="false">
+                        Where can I report bugs?
+                        <span class="faq-toggle">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>You can report bugs on our Discord server in the #bug-reports channel.
+                        Screenshots and descriptions of what happened are super helpful. We read
+                        every report!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ============================================ -->
+    <!--                  DEVLOG                      -->
+    <!-- ============================================ -->
+    <section class="section devlog" id="devlog">
+        <div class="container">
+            <h2 class="section-title">~ Devlog ~</h2>
+            <p class="section-subtitle">notes from development</p>
+            <div class="devlog-list">
+                <div class="devlog-entry">
+                    <div class="devlog-date">June 8, 2026</div>
+                    <h3 class="devlog-title">v0.3.2 - Bug fixes & polish</h3>
+                    <p class="devlog-text">
+                        Fixed that one wall in the forest where players kept getting stuck.
+                        Also improved some tile collisions and adjusted jump timing slightly.
+                        The movement should feel a bit better now.
+                    </p>
+                </div>
+                <div class="devlog-entry">
+                    <div class="devlog-date">May 29, 2026</div>
+                    <h3 class="devlog-title">v0.3.1 - New area added!</h3>
+                    <p class="devlog-text">
+                        Added the beginning section of the Silent Caves. It's still pretty
+                        short but the atmosphere turned out nice. Working on more rooms for
+                        the next update. Also added some new ambient sounds.
+                    </p>
+                </div>
+                <div class="devlog-entry">
+                    <div class="devlog-date">May 15, 2026</div>
+                    <h3 class="devlog-title">v0.3.0 - Movement rework</h3>
+                    <p class="devlog-text">
+                        Completely redid the movement system. Jumping feels way better now
+                        and we added coyote time. Also fixed a bunch of small bugs that
+                        people reported on Discord. Thanks for all the feedback!
+                    </p>
+                </div>
+                <div class="devlog-entry">
+                    <div class="devlog-date">April 28, 2026</div>
+                    <h3 class="devlog-title">v0.2.5 - Working on future content</h3>
+                    <p class="devlog-text">
+                        Started prototyping the Ancient Ruins area. Not ready yet but it's
+                        coming together. Also experimenting with some new enemy types. The
+                        golem from the forest might get a friend soon.
+                    </p>
+                </div>
+                <div class="devlog-entry">
+                    <div class="devlog-date">April 10, 2026</div>
+                    <h3 class="devlog-title">v0.2.0 - First public beta!</h3>
+                    <p class="devlog-text">
+                        We finally released the first beta build! It's rough around the edges
+                        but it's out there. Thank you to everyone who tried it and sent us
+                        feedback. We're reading everything. More updates soon.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--             PLAYER FEEDBACK                  -->
+    <!-- ============================================ -->
+    <section class="section feedback" id="feedback">
+        <div class="container">
+            <h2 class="section-title">~ Player Feedback ~</h2>
+            <div class="feedback-list">
+                <div class="feedback-item">
+                    <div class="feedback-username">NightMoss:</div>
+                    <div class="feedback-comment">"played the beta for like 20 mins, movement feels nice but some places are still confusing"</div>
+                </div>
+                <div class="feedback-item">
+                    <div class="feedback-username">LunaByte:</div>
+                    <div class="feedback-comment">"the forest area looks cute, but i got stuck one time near a wall lol"</div>
+                </div>
+                <div class="feedback-item">
+                    <div class="feedback-username">PixelDrew:</div>
+                    <div class="feedback-comment">"not perfect yet but it has that small indie game feeling, i wanna see more updates"</div>
+                </div>
+            </div>
+            <button class="btn-feedback" id="btn-leave-feedback">Leave Feedback</button>
+        </div>
+    </section>
+
+    <!-- Beta Access Popup -->
+    <div class="popup-overlay" id="beta-popup">
+        <div class="popup-box popup-beta">
+            <h2 class="beta-popup-title">Beta Access Required</h2>
+            <p class="popup-text beta-popup-desc">ScanFall is currently available only for selected beta testers.</p>
+            <p class="popup-text beta-popup-desc">Please enter your beta tester code to continue.</p>
+            <p class="popup-text beta-popup-hint">If you don't have a code yet, join our Discord and follow future beta announcements.</p>
+            <input type="text" id="beta-code-input" class="beta-code-input" placeholder="Enter beta code" autocomplete="off" spellcheck="false">
+            <p class="beta-code-error" id="beta-code-error" hidden>Invalid beta code. Please check your code and try again.</p>
+            <div class="beta-popup-actions">
+                <button type="button" class="beta-submit-btn" id="beta-submit-btn">Submit</button>
+                <button type="button" class="popup-close" id="beta-popup-close">Close</button>
+                <a href="https://discord.gg/UxHqcyFYSc" class="community-btn discord beta-discord-btn" id="beta-discord-btn" target="_blank" rel="noopener">
+                    <span class="community-icon">💬</span>
+                    Discord
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feedback Login Popup -->
+    <div class="popup-overlay" id="feedback-popup">
+        <div class="popup-box">
+            <p class="popup-text">You must be logged in to leave feedback.</p>
+            <button class="popup-close" id="popup-close-feedback">OK</button>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!--            MADE WITH PASSION                 -->
+    <!-- ============================================ -->
+    <section class="section passion" id="passion">
+        <div class="container">
+            <p class="passion-text">
+                ScanFall  is a small project made by a tiny team of developers who simply
+                wanted to create an adventure worth remembering.
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                  FOOTER                      -->
+    <!-- ============================================ -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <span class="footer-logo">ScanFall </span>
+                    <span class="footer-badge">Beta Version</span>
+                </div>
+                <div class="footer-links">
+                    <!-- 
+                        SOCIAL LINKS:
+                        Replace href="#" with your actual links.
+                    -->
+                    <a href="#" target="_blank" rel="noopener">YouTube</a>
+                </div>
+            </div>
+            <div class="footer-unity">
+                <!-- 
+                    UNITY LOGO:
+                    You can replace this with an actual Unity logo image.
+                    Example: <img src="images/unity-logo.png" alt="Unity" class="unity-logo-img">
+                -->
+                <span class="unity-icon">⚙</span>
+                Made with Unity Engine
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ScanFall . All rights reserved. Made with ❤ by a tiny team.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Easter Egg Popup -->
+    <div class="popup-overlay" id="easter-egg-popup">
+        <div class="popup-box popup-easter">
+            <p class="popup-text popup-secret">you found a secret :)</p>
+            <button class="popup-close" id="popup-close-easter">✨</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>>
